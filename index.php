@@ -28,7 +28,10 @@ $url = "Vazio";
 <head>
 <style>
 body{
-    margin-left: 30%;
+  position: absolute;
+  right: 9%;
+  width: 80%;
+  height: 120px; 
 }
 
 xmp {
@@ -76,31 +79,31 @@ xmp {
 .tg .tg-yw4l {
     vertical-align: top;
 }    
+
 }
 </style>
 </head>
 <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<h2>Pixel Tracker</h2>
-<form action="" class="col s12" method="post">    
-    <p><input id="name" name="name" placeholder="Recipient Name" type="text"></p>
-    <p><input id="email" name="email" placeholder="Recipient Email" type="text"></p>    
+<h2 class="center-align">Pixel Tracker</h2>
+<form action="" class="center-align" method="post">    
+    <p><input id="name" class="imp" name="name" placeholder="Recipient Name" type="text" value="Lucas Andrade"></p>
+    <p><input id="email" name="email" placeholder="Recipient Email" type="text" value="lucas.andrade@visaogrupo.com.br"></p>    
     <p><input id="generate" name="generate" value="Criar" class="btn green" type="submit"></p>
     <p></p>
 </form>
 
-<form action="email.php" class="col s12" method="post">
+<form action="email.php" class="center-align" method="post">
     <h3>Enviar email</h3>
-    <p><input id="emailEnvia" name="emailEnvia" placeholder="Recipient Email" type="text"></p>  
+<p><input id="emailEnvia" class="input-field" name="emailEnvia" placeholder="Recipient Email" type="text" value="lucas.andrade@visaogrupo.com.br"></p>  
     <input type="submit" id="btnEnvia" name="btnEnvia" valeu="Enviar" class="btn orange"/>
-
+    <h3>Seu código de rastreio</h3>
+    <p></p>
+    <p id="urlGen" class="gray" name="pixel" class="jumbotron">
+        <?php echo $url?>
+    </p>
 </form>
 
-<h3>Seu código de rastreio</h3>
-<p></p>
-<p id="urlGen" class="gray">
-	<?php echo $url?>
-</p>
 <div>
     <?php require "report.php"; ?>
 </div>

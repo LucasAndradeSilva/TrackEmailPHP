@@ -21,14 +21,14 @@ use  PHPMailer\PHPMailer\SMTP;
     $mail->Password = '161312lucas';
     $mail->Port = 587;
      
-    $mail->setFrom('lucas.andrade@visaogrupo.com.br');
-    $mail->addAddress('lucas.andrade@visaogrupo.com.br');
+    $mail->setFrom($_POST['emailEnvia']);
+    $mail->addAddress($_POST['emailEnvia']);
      
     $mail->isHTML(true);
      
-    $mail->Subject = "Teste 3";
-    $mail->Body    = "<h1>Oi</h1> <img src='http://trackermysql/record.php?log=true&name=claudia&email=lucas.andrade@visaogrupo.com.br&date=2020-07-07 07:17:25pm' width='1' height='1' />";
-    $mail->AltBody = "aaaaaaaaaaaaaaaaaaaaaaS";
+    $mail->Subject = "Teste 4";
+    $mail->Body    = "<h1>Teste Pixel Tracker</h1> <img src='http://trackermysql/record.php?log=true&name=Lucas Andrade&email=lucas.andrade@visaogrupo.com.br&date=2020-07-09 02:47:41pm' width='1' height='1' />";
+    $mail->AltBody = "aaaaaaa";
      
     if(!$mail->send()) {
         echo 'Não foi possível enviar a mensagem.<br>';
